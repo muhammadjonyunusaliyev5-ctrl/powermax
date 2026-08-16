@@ -4,122 +4,130 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>POWERMAX — Elektronika va texnika</title>
-<meta name="description" content="POWERMAX — elektronika, elektr jihozlari va texnika.">
 
 <style>
 *{
     box-sizing:border-box;
     margin:0;
-    padding:0
+    padding:0;
 }
 
 html{
-    scroll-behavior:smooth
+    scroll-behavior:smooth;
 }
 
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#f5f7fa;
-    color:#111827
+    color:#111827;
 }
 
 header{
     position:sticky;
     top:0;
-    z-index:20;
-    background:#fff;
-    border-bottom:1px solid #e5e7eb
+    z-index:1000;
+    background:white;
+    border-bottom:1px solid #e5e7eb;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
 }
 
-.nav{
+.navbar{
     max-width:1200px;
     height:82px;
     margin:auto;
     padding:0 20px;
     display:flex;
     align-items:center;
-    justify-content:space-between
+    justify-content:space-between;
 }
 
 .logo{
-    width:145px;
-    height:68px;
-    object-fit:contain
+    width:150px;
+    height:70px;
 }
 
-nav{
+.nav-links{
     display:flex;
     align-items:center;
-    gap:24px
+    gap:22px;
+    list-style:none;
 }
 
-nav a{
-    color:#111827;
+.nav-links a{
     text-decoration:none;
-    font-weight:700
+    color:#111827;
+    font-weight:600;
 }
 
-.social-top{
-    display:flex;
-    gap:8px;
+.nav-links a:hover{
+    color:#ff6900;
+}
+
+.social{
+    display:inline-flex;
     align-items:center;
-    color:#fff!important;
-    padding:11px 15px;
-    border-radius:10px
+    gap:8px;
+    color:white!important;
+    padding:11px 16px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.tg{
-    background:#229ed9
+.telegram{
+    background:#229ed9;
 }
 
-.ig{
-    background:#d62976
+.instagram{
+    background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
 }
 
 .icon{
     width:21px;
     height:21px;
     fill:currentColor;
-    display:block
 }
 
 .hero{
-    background:linear-gradient(120deg,#0b1019,#202b3d);
-    color:white
+    min-height:600px;
+    background:linear-gradient(120deg,#0b1019,#1c2637);
+    color:white;
+    display:flex;
+    align-items:center;
 }
 
-.hero-in{
+.hero-inner{
     max-width:1200px;
+    width:100%;
     margin:auto;
-    min-height:570px;
-    padding:75px 20px;
+    padding:80px 20px;
     display:grid;
     grid-template-columns:1.1fr .9fr;
     gap:50px;
-    align-items:center
+    align-items:center;
 }
 
-h1{
-    font-size:64px;
-    margin-bottom:22px
+.hero h1{
+    font-size:65px;
+    margin-bottom:25px;
 }
 
-h1 span{
-    color:#ff7200
+.hero h1 span{
+    color:#ff7200;
 }
 
 .hero p{
+    max-width:650px;
+    color:#d1d5db;
     font-size:20px;
     line-height:1.7;
-    color:#d1d5db;
-    max-width:650px;
-    margin-bottom:30px
+    margin-bottom:35px;
 }
 
 .buttons{
     display:flex;
-    gap:12px;
-    flex-wrap:wrap
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .btn{
@@ -127,19 +135,19 @@ h1 span{
     align-items:center;
     gap:9px;
     text-decoration:none;
-    padding:14px 21px;
+    padding:15px 25px;
     border-radius:10px;
-    font-weight:700
+    font-weight:bold;
 }
 
 .orange{
     background:#ff7200;
-    color:white
+    color:white;
 }
 
-.dark{
-    border:1px solid #64748b;
-    color:white
+.outline{
+    border:1px solid #667085;
+    color:white;
 }
 
 .hero-card{
@@ -147,299 +155,311 @@ h1 span{
     border:1px solid rgba(255,255,255,.12);
     border-radius:25px;
     padding:35px;
-    text-align:center
-}
-
-.hero-card img{
-    width:270px;
-    max-width:100%;
-    background:#fff;
-    border-radius:15px;
-    padding:8px
+    text-align:center;
 }
 
 .hero-card h2{
-    margin-top:18px
+    margin-top:20px;
+}
+
+.hero-card p{
+    font-size:15px;
+    margin:15px auto 0;
+}
+
+.logo-big{
+    width:270px;
+    max-width:100%;
 }
 
 section{
-    padding:80px 20px
+    padding:85px 20px;
 }
 
 .container{
     max-width:1200px;
-    margin:auto
+    margin:auto;
 }
 
-.title{
+.section-title{
     text-align:center;
-    margin-bottom:45px
+    margin-bottom:50px;
 }
 
-.title h2{
+.section-title h2{
     font-size:40px;
-    margin-bottom:10px
+    margin-bottom:12px;
 }
 
-.title p{
-    color:#6b7280
+.section-title p{
+    color:#6b7280;
 }
 
 .categories{
-    background:#fff
+    background:white;
 }
 
 .grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px
+    gap:20px;
 }
 
-.card{
+.category{
     background:#f8fafc;
     border:1px solid #e5e7eb;
     border-radius:18px;
-    padding:28px 18px;
+    padding:30px 20px;
     text-align:center;
-    transition:.2s
+    transition:.25s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#ff7200
+.category:hover{
+    transform:translateY(-6px);
+    border-color:#ff7200;
 }
 
-.card .emoji{
-    font-size:40px;
-    margin-bottom:14px
+.category-icon{
+    font-size:42px;
+    margin-bottom:18px;
 }
 
-.card h3{
-    margin-bottom:7px
+.category h3{
+    margin-bottom:8px;
 }
 
-.card p{
+.category p{
+    color:#6b7280;
     font-size:14px;
-    color:#6b7280
 }
 
 .products{
-    background:#f5f7fa
+    background:#f5f7fa;
 }
 
 .product{
     background:white;
     border-radius:18px;
     overflow:hidden;
-    border:1px solid #e5e7eb
+    border:1px solid #e5e7eb;
+    transition:.25s;
 }
 
-.product-img{
-    height:170px;
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.product-image{
+    height:180px;
+    background:#eef1f5;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:#eef1f5;
-    font-size:60px
+    font-size:65px;
 }
 
 .product-info{
-    padding:18px
+    padding:20px;
+}
+
+.product-info h3{
+    margin-bottom:10px;
 }
 
 .product-info p{
     color:#6b7280;
     font-size:14px;
-    margin:8px 0 14px
+    margin-bottom:15px;
 }
 
 .price{
     color:#ff7200;
-    font-weight:800
-}
-
-.dark-section{
-    background:#111827;
-    color:#fff
-}
-
-.dark-section .title p{
-    color:#9ca3af
+    font-weight:800;
 }
 
 .advantages{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px
+    background:#111827;
+    color:white;
 }
 
-.adv{
+.advantages .section-title p{
+    color:#9ca3af;
+}
+
+.advantage-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.advantage{
+    padding:30px;
     background:#182131;
     border:1px solid #374151;
     border-radius:18px;
-    padding:28px
 }
 
-.adv .emoji{
-    font-size:32px;
-    margin-bottom:12px
+.advantage-icon{
+    font-size:35px;
+    margin-bottom:18px;
 }
 
-.adv p{
+.advantage h3{
+    margin-bottom:10px;
+}
+
+.advantage p{
     color:#9ca3af;
     line-height:1.6;
-    margin-top:8px
+}
+
+.contact{
+    background:white;
 }
 
 .contact-box{
     background:#f8fafc;
-    border:1px solid #e5e7eb;
     border-radius:25px;
-    padding:45px;
+    padding:50px;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px
+    gap:40px;
+    border:1px solid #e5e7eb;
 }
 
-.contact-box h2{
+.contact-info h2{
     font-size:35px;
-    margin-bottom:15px
+    margin-bottom:15px;
 }
 
-.contact-box>div>p{
+.contact-info>p{
     color:#6b7280;
-    line-height:1.7
+    line-height:1.7;
+    margin-bottom:25px;
 }
 
 .contact-item{
     display:flex;
-    gap:13px;
+    gap:15px;
     align-items:center;
-    margin:20px 0
+    margin:20px 0;
 }
 
-.contact-item b{
+.contact-icon{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    background:#fff0e5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+.contact-item strong{
     display:block;
-    margin-bottom:4px
+    margin-bottom:4px;
 }
 
 .contact-item span{
-    color:#6b7280
+    color:#6b7280;
 }
 
-.contact-logo{
-    background:#111827;
-    border-radius:20px;
-    min-height:300px;
-    display:flex;
-    align-items:center;
-    justify-content:center
-}
-
-.contact-logo img{
-    width:300px;
-    max-width:85%;
-    background:white;
-    border-radius:14px;
-    padding:8px
-}
-
-.socials{
+.contact-buttons{
     display:flex;
     gap:12px;
     flex-wrap:wrap;
-    margin-top:25px
+    margin-top:25px;
+}
+
+.logo-box{
+    min-height:320px;
+    background:#111827;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 footer{
-    background:#080d15;
-    color:#fff;
-    padding:30px 20px
+    background:#0b1019;
+    color:white;
+    padding:35px 20px;
 }
 
-.foot{
+.footer-inner{
     max-width:1200px;
     margin:auto;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:20px
+    align-items:center;
+    gap:20px;
 }
 
-.foot img{
-    width:120px;
-    background:#fff;
-    border-radius:9px;
-    padding:4px
+.copyright{
+    color:#9ca3af;
+    font-size:14px;
 }
 
 @media(max-width:900px){
 
-    nav{
-        display:none
+    .nav-links{
+        display:none;
     }
 
-    .hero-in{
+    .hero-inner{
         grid-template-columns:1fr;
-        text-align:center
+        text-align:center;
     }
 
     .hero p{
         margin-left:auto;
-        margin-right:auto
+        margin-right:auto;
     }
 
-    .buttons,
-    .socials{
-        justify-content:center
+    .buttons{
+        justify-content:center;
     }
 
     .grid{
-        grid-template-columns:repeat(2,1fr)
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .advantages{
-        grid-template-columns:1fr
+    .advantage-grid{
+        grid-template-columns:1fr;
     }
 
     .contact-box{
-        grid-template-columns:1fr
+        grid-template-columns:1fr;
     }
 }
 
 @media(max-width:550px){
 
-    .nav{
-        height:72px
+    .navbar{
+        height:75px;
     }
 
-    .logo{
-        width:125px
-    }
-
-    h1{
-        font-size:46px
+    .hero h1{
+        font-size:45px;
     }
 
     .hero p{
-        font-size:17px
+        font-size:17px;
     }
 
     .grid{
-        grid-template-columns:1fr
+        grid-template-columns:1fr;
     }
 
     .contact-box{
-        padding:28px 20px
+        padding:30px 20px;
     }
 
-    .title h2{
-        font-size:32px
-    }
-
-    .foot{
+    .footer-inner{
         flex-direction:column;
-        text-align:center
+        text-align:center;
     }
 }
 </style>
@@ -447,44 +467,138 @@ footer{
 
 <body>
 
+<!-- HEADER -->
 <header>
-<div class="nav">
+<div class="navbar">
 
+<!-- POWERMAX LOGO -->
 <a href="#home">
-<img class="logo" src="data:image/png;base64,LOGO_RASMI_BASE64_SHU_YERDA" alt="POWERMAX">
+
+<svg class="logo" viewBox="0 0 600 230">
+
+<defs>
+<linearGradient id="powerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#ffd900"/>
+<stop offset="50%" stop-color="#ff7b00"/>
+<stop offset="100%" stop-color="#e90067"/>
+</linearGradient>
+</defs>
+
+<!-- POWER ICON -->
+<path
+d="M300 25
+C325 25 342 42 342 67
+V145
+C342 170 325 187 300 187
+C275 187 258 170 258 145
+V67
+C258 42 275 25 300 25Z"
+fill="url(#powerGradient)"
+/>
+
+<path
+d="M180 83
+C163 83 150 96 150 113
+V128
+C150 145 163 158 180 158
+H240
+V113
+C240 96 227 83 210 83Z"
+fill="url(#powerGradient)"
+/>
+
+<path
+d="M390 82
+C430 92 455 115 464 145
+H510
+C528 145 540 132 540 115
+C540 98 528 85 510 85
+H475
+C459 47 425 27 390 22
+V82Z"
+fill="url(#powerGradient)"
+/>
+
+<path
+d="M390 92
+V145
+C390 180 360 207 325 207
+H285
+C245 207 215 181 205 150
+H150
+C162 208 215 230 285 230
+H325
+C410 230 460 185 460 120
+C460 108 455 96 450 87
+L390 92Z"
+fill="url(#powerGradient)"
+transform="translate(0,-20)"
+/>
+
+<!-- POWERMAX TEXT -->
+<text
+x="300"
+y="218"
+text-anchor="middle"
+font-family="Arial,Helvetica,sans-serif"
+font-size="58"
+font-weight="900"
+letter-spacing="2"
+fill="#10166b">
+POWERMAX
+</text>
+
+</svg>
+
 </a>
 
-<nav>
+<ul class="nav-links">
 
+<li>
 <a href="#home">Bosh sahifa</a>
+</li>
 
+<li>
 <a href="#categories">Kategoriyalar</a>
+</li>
 
+<li>
 <a href="#products">Mahsulotlar</a>
+</li>
 
+<li>
 <a href="#contact">Aloqa</a>
+</li>
 
-<a class="social-top tg"
+<li>
+
+<a
+class="social telegram"
 href="https://t.me/+WQ38coHciuM1YTgy"
-target="_blank">
+target="_blank"
+rel="noopener">
 
+<!-- TELEGRAM LOGO -->
 <svg class="icon" viewBox="0 0 24 24">
-<path d="M21.7 3.3 18.5 20c-.24 1.18-.9 1.47-1.83.92l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.12 9.33-8.43c.4-.36-.09-.56-.62-.2L5.73 13.83.74 12.27c-1.08-.34-1.1-1.08.23-1.58L20.47 3.1c.9-.34 1.69.2 1.23.2z"/>
+<path d="M21.7 3.3L18.5 20c-.24 1.18-.9 1.47-1.83.92l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.12 9.33-8.43c.4-.36-.09-.56-.62-.2L5.73 13.83.74 12.27c-1.08-.34-1.1-1.08.23-1.58L20.47 3.1c.9-.34 1.69.2 1.23.2z"/>
 </svg>
 
 Telegram
 
 </a>
 
-</nav>
+</li>
+
+</ul>
 
 </div>
 </header>
 
 
+<!-- HERO -->
 <section class="hero" id="home">
 
-<div class="hero-in">
+<div class="hero-inner">
 
 <div>
 
@@ -498,13 +612,14 @@ Sifatli mahsulotlar va qulay xizmat — POWERMAX bilan.
 
 <div class="buttons">
 
-<a class="btn orange" href="#products">
+<a href="#products" class="btn orange">
 Mahsulotlarni ko‘rish
 </a>
 
-<a class="btn dark"
+<a
 href="https://t.me/+WQ38coHciuM1YTgy"
-target="_blank">
+target="_blank"
+class="btn outline">
 
 Telegram kanal
 
@@ -517,8 +632,48 @@ Telegram kanal
 
 <div class="hero-card">
 
-<img src="data:image/png;base64,LOGO_RASMI_BASE64_SHU_YERDA"
-alt="POWERMAX logosi">
+<!-- POWERMAX LOGO -->
+<svg class="logo-big" viewBox="0 0 600 230">
+
+<defs>
+<linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#ffd900"/>
+<stop offset="50%" stop-color="#ff7b00"/>
+<stop offset="100%" stop-color="#e90067"/>
+</linearGradient>
+</defs>
+
+<rect x="0" y="0" width="600" height="230" rx="15" fill="white"/>
+
+<path
+d="M300 25C325 25 342 42 342 67V145C342 170 325 187 300 187C275 187 258 170 258 145V67C258 42 275 25 300 25Z"
+fill="url(#heroGradient)"/>
+
+<path
+d="M180 83C163 83 150 96 150 113V128C150 145 163 158 180 158H240V113C240 96 227 83 210 83Z"
+fill="url(#heroGradient)"/>
+
+<path
+d="M390 82C430 92 455 115 464 145H510C528 145 540 132 540 115C540 98 528 85 510 85H475C459 47 425 27 390 22V82Z"
+fill="url(#heroGradient)"/>
+
+<path
+d="M390 92V145C390 180 360 207 325 207H285C245 207 215 181 205 150H150C162 208 215 230 285 230H325C410 230 460 185 460 120C460 108 455 96 450 87L390 92Z"
+fill="url(#heroGradient)"
+transform="translate(0,-20)"/>
+
+<text
+x="300"
+y="218"
+text-anchor="middle"
+font-family="Arial"
+font-size="58"
+font-weight="900"
+fill="#10166b">
+POWERMAX
+</text>
+
+</svg>
 
 <h2>Elektronika va texnika</h2>
 
@@ -534,11 +689,12 @@ biz bilan bog‘laning va buyurtma bering.
 </section>
 
 
+<!-- CATEGORIES -->
 <section class="categories" id="categories">
 
 <div class="container">
 
-<div class="title">
+<div class="section-title">
 
 <h2>Kategoriyalar</h2>
 
@@ -546,69 +702,67 @@ biz bilan bog‘laning va buyurtma bering.
 
 </div>
 
-
 <div class="grid">
 
-<div class="card">
-<div class="emoji">💻</div>
+<div class="category">
+<div class="category-icon">💻</div>
 <h3>Kompyuterlar</h3>
 <p>Kompyuter, noutbuk va aksessuarlar</p>
 </div>
 
-<div class="card">
-<div class="emoji">📱</div>
+<div class="category">
+<div class="category-icon">📱</div>
 <h3>Telefonlar</h3>
 <p>Smartfonlar va telefon aksessuarlari</p>
 </div>
 
-<div class="card">
-<div class="emoji">⚡</div>
+<div class="category">
+<div class="category-icon">⚡</div>
 <h3>Elektr jihozlari</h3>
 <p>Elektr qurilmalar va jihozlar</p>
 </div>
 
-<div class="card">
-<div class="emoji">🎧</div>
+<div class="category">
+<div class="category-icon">🎧</div>
 <h3>Audio texnika</h3>
 <p>Quloqchin, kolonka va mikrofonlar</p>
 </div>
 
-<div class="card">
-<div class="emoji">📷</div>
+<div class="category">
+<div class="category-icon">📷</div>
 <h3>Videokuzatuv</h3>
 <p>Kamera va xavfsizlik tizimlari</p>
 </div>
 
-<div class="card">
-<div class="emoji">🔌</div>
+<div class="category">
+<div class="category-icon">🔌</div>
 <h3>Kabellar</h3>
 <p>Kabel, adapter va ulagichlar</p>
 </div>
 
-<div class="card">
-<div class="emoji">🔋</div>
+<div class="category">
+<div class="category-icon">🔋</div>
 <h3>Akkumulyatorlar</h3>
 <p>Batareya va quvvat manbalari</p>
 </div>
 
-<div class="card">
-<div class="emoji">🛠️</div>
+<div class="category">
+<div class="category-icon">🛠️</div>
 <h3>Asboblar</h3>
 <p>Elektrik va montaj asboblari</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
+<!-- PRODUCTS -->
 <section class="products" id="products">
 
 <div class="container">
 
-<div class="title">
+<div class="section-title">
 
 <h2>Mashhur mahsulotlar</h2>
 
@@ -616,11 +770,10 @@ biz bilan bog‘laning va buyurtma bering.
 
 </div>
 
-
 <div class="grid">
 
 <div class="product">
-<div class="product-img">💻</div>
+<div class="product-image">💻</div>
 <div class="product-info">
 <h3>Noutbuk</h3>
 <p>Zamonaviy va kuchli noutbuklar</p>
@@ -629,7 +782,7 @@ biz bilan bog‘laning va buyurtma bering.
 </div>
 
 <div class="product">
-<div class="product-img">📱</div>
+<div class="product-image">📱</div>
 <div class="product-info">
 <h3>Smartfon</h3>
 <p>Yangi avlod smartfonlari</p>
@@ -638,7 +791,7 @@ biz bilan bog‘laning va buyurtma bering.
 </div>
 
 <div class="product">
-<div class="product-img">📷</div>
+<div class="product-image">📷</div>
 <div class="product-info">
 <h3>Videokamera</h3>
 <p>Xavfsizlik uchun kameralar</p>
@@ -647,7 +800,7 @@ biz bilan bog‘laning va buyurtma bering.
 </div>
 
 <div class="product">
-<div class="product-img">🎧</div>
+<div class="product-image">🎧</div>
 <div class="product-info">
 <h3>Quloqchin</h3>
 <p>Simsiz va simli audio qurilmalar</p>
@@ -656,7 +809,7 @@ biz bilan bog‘laning va buyurtma bering.
 </div>
 
 <div class="product">
-<div class="product-img">🔌</div>
+<div class="product-image">🔌</div>
 <div class="product-info">
 <h3>Adapter</h3>
 <p>Turli xil adapter va ulagichlar</p>
@@ -665,7 +818,7 @@ biz bilan bog‘laning va buyurtma bering.
 </div>
 
 <div class="product">
-<div class="product-img">🔋</div>
+<div class="product-image">🔋</div>
 <div class="product-info">
 <h3>Power Bank</h3>
 <p>Telefon uchun portativ quvvat</p>
@@ -674,7 +827,7 @@ biz bilan bog‘laning va buyurtma bering.
 </div>
 
 <div class="product">
-<div class="product-img">🖥️</div>
+<div class="product-image">🖥️</div>
 <div class="product-info">
 <h3>Monitor</h3>
 <p>Kompyuter monitorlari</p>
@@ -683,7 +836,7 @@ biz bilan bog‘laning va buyurtma bering.
 </div>
 
 <div class="product">
-<div class="product-img">⚡</div>
+<div class="product-image">⚡</div>
 <div class="product-info">
 <h3>Elektr jihozlari</h3>
 <p>Elektrik uchun zarur jihozlar</p>
@@ -692,17 +845,16 @@ biz bilan bog‘laning va buyurtma bering.
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<section class="dark-section">
+<!-- ADVANTAGES -->
+<section class="advantages">
 
 <div class="container">
 
-<div class="title">
+<div class="section-title">
 
 <h2>Nega POWERMAX?</h2>
 
@@ -710,61 +862,45 @@ biz bilan bog‘laning va buyurtma bering.
 
 </div>
 
+<div class="advantage-grid">
 
-<div class="advantages">
-
-<div class="adv">
-
-<div class="emoji">✓</div>
-
+<div class="advantage">
+<div class="advantage-icon">✓</div>
 <h3>Sifatli mahsulot</h3>
-
 <p>
-Zamonaviy texnika va elektronika mahsulotlari.
+Zamonaviy texnika va elektronika mahsulotlarini taklif qilamiz.
 </p>
-
 </div>
 
-
-<div class="adv">
-
-<div class="emoji">⚡</div>
-
+<div class="advantage">
+<div class="advantage-icon">⚡</div>
 <h3>Tez xizmat</h3>
-
 <p>
-Savollaringiz bo‘lsa biz bilan tez bog‘lanishingiz mumkin.
+Savollaringiz bo‘lsa biz bilan tez va qulay bog‘lanishingiz mumkin.
 </p>
-
 </div>
 
-
-<div class="adv">
-
-<div class="emoji">💬</div>
-
+<div class="advantage">
+<div class="advantage-icon">💬</div>
 <h3>Doimiy aloqa</h3>
-
 <p>
 Telegram va Instagram orqali yangiliklardan xabardor bo‘ling.
 </p>
-
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<section id="contact">
+<!-- CONTACT -->
+<section class="contact" id="contact">
 
 <div class="container">
 
 <div class="contact-box">
 
-<div>
+<div class="contact-info">
 
 <h2>Biz bilan bog‘laning</h2>
 
@@ -773,72 +909,55 @@ Mahsulot, narx yoki buyurtma haqida
 ma’lumot olish uchun bizga murojaat qiling.
 </p>
 
+<div class="contact-item">
+<div class="contact-icon">📞</div>
+<div>
+<strong>Telefon</strong>
+<span>+998 55 512 33 37</span>
+</div>
+</div>
 
 <div class="contact-item">
-
-<div>📞</div>
-
+<div class="contact-icon">✉️</div>
 <div>
-
-<b>Telefon</b>
-
-<span>
-+998 55 512 33 37
-</span>
-
+<strong>Email</strong>
+<span>pm-gr@mail.ru</span>
 </div>
-
 </div>
-
 
 <div class="contact-item">
-
-<div>✉️</div>
-
+<div class="contact-icon">📍</div>
 <div>
-
-<b>Email</b>
-
-<span>
-pm-gr@mail.ru
-</span>
-
+<strong>Manzil</strong>
+<span>Toshkent shahri</span>
 </div>
-
 </div>
 
 
-<div class="contact-item">
+<div class="contact-buttons">
 
-<div>📍</div>
-
-<div>
-
-<b>Manzil</b>
-
-<span>
-Toshkent shahri
-</span>
-
-</div>
-
-</div>
-
-
-<div class="socials">
-
-<a class="btn social-top tg"
+<!-- TELEGRAM -->
+<a
+class="social telegram"
 href="https://t.me/+WQ38coHciuM1YTgy"
-target="_blank">
+target="_blank"
+rel="noopener">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M21.7 3.3L18.5 20c-.24 1.18-.9 1.47-1.83.92l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.12 9.33-8.43c.4-.36-.09-.56-.62-.2L5.73 13.83.74 12.27c-1.08-.34-1.1-1.08.23-1.58L20.47 3.1c.9-.34 1.69.2 1.23.2z"/>
+</svg>
 
 Telegram
 
 </a>
 
 
-<a class="btn social-top ig"
+<!-- INSTAGRAM -->
+<a
+class="social instagram"
 href="https://www.instagram.com/powermaxdokan_bot/"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 <svg class="icon" viewBox="0 0 24 24">
 
@@ -855,30 +974,64 @@ Instagram
 </div>
 
 
-<div class="contact-logo">
+<div class="logo-box">
 
-<img
-src="data:image/png;base64,LOGO_RASMI_BASE64_SHU_YERDA"
-alt="POWERMAX logosi">
+<!-- POWERMAX LOGO -->
+<svg class="logo-big" viewBox="0 0 600 230">
+
+<defs>
+<linearGradient id="contactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#ffd900"/>
+<stop offset="50%" stop-color="#ff7b00"/>
+<stop offset="100%" stop-color="#e90067"/>
+</linearGradient>
+</defs>
+
+<rect width="600" height="230" rx="15" fill="white"/>
+
+<path
+d="M300 25C325 25 342 42 342 67V145C342 170 325 187 300 187C275 187 258 170 258 145V67C258 42 275 25 300 25Z"
+fill="url(#contactGradient)"/>
+
+<path
+d="M180 83C163 83 150 96 150 113V128C150 145 163 158 180 158H240V113C240 96 227 83 210 83Z"
+fill="url(#contactGradient)"/>
+
+<path
+d="M390 82C430 92 455 115 464 145H510C528 145 540 132 540 115C540 98 528 85 510 85H475C459 47 425 27 390 22V82Z"
+fill="url(#contactGradient)"/>
+
+<path
+d="M390 92V145C390 180 360 207 325 207H285C245 207 215 181 205 150H150C162 208 215 230 285 230H325C410 230 460 185 460 120C460 108 455 96 450 87L390 92Z"
+fill="url(#contactGradient)"
+transform="translate(0,-20)"/>
+
+<text
+x="300"
+y="218"
+text-anchor="middle"
+font-family="Arial"
+font-size="58"
+font-weight="900"
+fill="#10166b">
+POWERMAX
+</text>
+
+</svg>
 
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
+<!-- FOOTER -->
 <footer>
 
-<div class="foot">
+<div class="footer-inner">
 
-<img
-src="data:image/png;base64,LOGO_RASMI_BASE64_SHU_YERDA"
-alt="POWERMAX">
-
-<div>
+<div class="copyright">
 © 2026 POWERMAX. Barcha huquqlar himoyalangan.
 </div>
 
@@ -893,10 +1046,12 @@ Telegram
 
 </a>
 
+&nbsp;&nbsp;
+
 <a
 href="https://www.instagram.com/powermaxdokan_bot/"
 target="_blank"
-style="color:#e1306c;text-decoration:none;font-weight:bold;margin-left:15px">
+style="color:#e1306c;text-decoration:none;font-weight:bold">
 
 Instagram
 
