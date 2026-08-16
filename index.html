@@ -2,264 +2,443 @@
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>POWERMAX — Radio texnika va maishiy texnika</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-    font-family:Arial,sans-serif;
-    background:#f5f6f8;
-    color:#151515;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-header{
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f6f8;
+    color:#16181d;
+}
+
+/* ================= HEADER ================= */
+
+.top-header{
     position:sticky;
     top:0;
-    z-index:1000;
-    background:#fff;
-    box-shadow:0 2px 15px #0001;
+    z-index:9999;
+    background:rgba(255,255,255,.97);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #e5e7eb;
+    box-shadow:0 4px 20px rgba(0,0,0,.07);
 }
+
 .nav{
-    max-width:1200px;
+    max-width:1250px;
+    min-height:78px;
     margin:auto;
-    min-height:80px;
-    padding:10px 20px;
+    padding:8px 20px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:20px;
 }
-.logo{
-    width:155px;
+
+.brand img{
+    width:150px;
     height:60px;
     object-fit:contain;
 }
-nav{
+
+.main-nav{
     display:flex;
     align-items:center;
-    gap:10px;
+    justify-content:flex-end;
+    gap:6px;
     flex-wrap:wrap;
 }
-nav a{
-    text-decoration:none;
-    color:#222;
-    font-weight:bold;
-    padding:10px 12px;
-}
-nav a:hover{color:#ff6500}
 
-.social{
-    color:white!important;
+.main-nav>a{
+    text-decoration:none;
+    color:#20242b;
+    font-weight:700;
+    padding:10px 12px;
     border-radius:9px;
-    display:flex;
+    transition:.2s;
+}
+
+.main-nav>a:hover{
+    background:#f1f2f4;
+    color:#ff6500;
+}
+
+.phone-btn{
+    background:#111827!important;
+    color:white!important;
+}
+
+.phone-btn:hover{
+    background:#ff6500!important;
+}
+
+.telegram-btn,
+.instagram-btn{
+    display:flex!important;
     align-items:center;
     gap:7px;
+    color:white!important;
 }
-.telegram{background:#229ed9}
-.instagram{
-    background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)
+
+.telegram-btn{
+    background:#229ed9!important;
 }
-.social svg{width:20px;height:20px;fill:white}
+
+.telegram-btn:hover{
+    background:#168dcc!important;
+}
+
+.instagram-btn{
+    background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)!important;
+}
+
+.instagram-btn:hover{
+    opacity:.88;
+}
+
+.telegram-btn svg,
+.instagram-btn svg{
+    width:19px;
+    height:19px;
+    fill:white;
+}
+
+/* ================= HERO ================= */
 
 .hero{
-    background:linear-gradient(120deg,#090e18,#253247);
-    color:#fff;
+    background:
+    radial-gradient(circle at top right,#ff7a0020,transparent 35%),
+    linear-gradient(120deg,#080d16,#243247);
+
+    color:white;
 }
+
 .hero-inner{
-    max-width:1200px;
-    min-height:550px;
+    max-width:1250px;
+    min-height:500px;
     margin:auto;
-    padding:70px 20px;
+    padding:65px 20px;
+
     display:grid;
     grid-template-columns:1fr 1fr;
     align-items:center;
-    gap:40px;
+    gap:50px;
 }
+
 .hero h1{
-    font-size:65px;
-    margin-bottom:20px;
+    font-size:68px;
+    letter-spacing:1px;
+    margin-bottom:18px;
 }
-.hero h1 span{color:#ff6b00}
+
+.hero h1 span{
+    color:#ff6b00;
+}
+
 .hero p{
-    color:#d5d9df;
+    max-width:650px;
+    color:#d4d9e0;
     font-size:19px;
     line-height:1.7;
-    max-width:650px;
     margin-bottom:30px;
 }
+
 .buttons{
     display:flex;
     gap:12px;
     flex-wrap:wrap;
 }
+
 .btn{
     text-decoration:none;
     padding:14px 22px;
     border-radius:10px;
     font-weight:bold;
 }
-.orange{background:#ff6b00;color:white}
-.darkbtn{border:1px solid #aaa;color:white}
+
+.orange{
+    background:#ff6b00;
+    color:white;
+}
+
+.outline{
+    border:1px solid #9ca3af;
+    color:white;
+}
 
 .hero-logo{
     background:white;
-    padding:30px;
+    padding:35px;
     border-radius:25px;
     text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
+
 .hero-logo img{
-    width:300px;
+    width:330px;
     max-width:100%;
+    height:auto;
 }
 
-section{padding:75px 20px}
-.container{max-width:1200px;margin:auto}
-.title{text-align:center;margin-bottom:45px}
-.title h2{font-size:38px;margin-bottom:10px}
-.title p{color:#707070}
+/* ================= GENERAL ================= */
 
-.categories{background:#fff}
+section{
+    padding:75px 20px;
+}
+
+.container{
+    max-width:1250px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.title h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#70757d;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    background:white;
+}
+
 .grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
+
 .category{
     background:#f8fafc;
-    border:1px solid #e3e6ea;
+    border:1px solid #e2e5e9;
     border-radius:18px;
-    padding:28px 18px;
+    padding:27px 18px;
     text-align:center;
     transition:.2s;
 }
+
 .category:hover{
     transform:translateY(-5px);
     border-color:#ff6b00;
-    box-shadow:0 8px 25px #0001;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
+
 .icon{
-    font-size:42px;
-    margin-bottom:14px;
+    font-size:43px;
+    margin-bottom:13px;
 }
-.category h3{margin-bottom:8px}
+
+.category h3{
+    margin-bottom:8px;
+    font-size:18px;
+}
+
 .category p{
-    color:#777;
+    color:#70757d;
     font-size:14px;
     line-height:1.5;
 }
 
+/* ================= CATALOG ================= */
+
 .catalog{
     background:#f5f6f8;
 }
+
 .search{
+    display:block;
     width:100%;
     max-width:600px;
-    display:block;
     margin:0 auto 35px;
+
     padding:15px 18px;
-    border:1px solid #ddd;
+
+    border:1px solid #d9dde2;
     border-radius:12px;
+
     font-size:16px;
     outline:none;
+    background:white;
 }
+
+.search:focus{
+    border-color:#ff6b00;
+    box-shadow:0 0 0 3px #ff6b0018;
+}
+
 .product{
-    background:#fff;
-    border-radius:17px;
-    border:1px solid #e2e2e2;
+    background:white;
+    border:1px solid #e1e4e8;
+    border-radius:18px;
     overflow:hidden;
+    transition:.2s;
 }
+
+.product:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
 .product-top{
-    height:130px;
+    height:145px;
     background:#eef1f5;
+
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:55px;
+    justify-content:center;
+
+    font-size:58px;
 }
-.product-body{padding:18px}
-.product-body h3{margin-bottom:7px}
+
+.product-body{
+    padding:19px;
+}
+
+.product-body h3{
+    margin-bottom:8px;
+    font-size:19px;
+}
+
 .product-body p{
-    color:#777;
+    color:#70757d;
     font-size:14px;
     line-height:1.5;
 }
+
 .product-btn{
     display:inline-block;
-    margin-top:14px;
+    margin-top:15px;
     background:#ff6b00;
-    color:#fff;
+    color:white;
     text-decoration:none;
-    padding:10px 14px;
-    border-radius:8px;
+    padding:10px 15px;
+    border-radius:9px;
     font-weight:bold;
 }
+
+.product-btn:hover{
+    background:#e95d00;
+}
+
+/* ================= ADVANTAGES ================= */
 
 .dark{
     background:#111827;
     color:white;
 }
+
+.dark .title p{
+    color:#9ca3af;
+}
+
 .advantages{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
+
 .advantage{
     background:#1b2535;
     border:1px solid #374151;
     padding:30px;
     border-radius:18px;
 }
+
 .advantage-icon{
     font-size:35px;
     margin-bottom:12px;
 }
+
+.advantage h3{
+    margin-bottom:5px;
+}
+
 .advantage p{
-    color:#aaa;
+    color:#aeb5c0;
     margin-top:10px;
     line-height:1.6;
 }
 
+/* ================= CONTACT ================= */
+
 .contact{
-    background:#fff;
+    background:white;
 }
+
 .contact-box{
     background:#f8fafc;
     border:1px solid #e1e4e8;
     border-radius:24px;
     padding:40px;
+
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
 }
+
 .contact-box h2{
     font-size:35px;
     margin-bottom:15px;
 }
-.contact-box>div>p{
-    color:#707070;
+
+.contact-description{
+    color:#70757d;
     line-height:1.7;
 }
+
 .contact-item{
     display:flex;
-    gap:14px;
     align-items:center;
-    margin:20px 0;
+    gap:14px;
+    margin:21px 0;
 }
-.contact-icon{font-size:25px}
-.socials{
+
+.contact-icon{
+    font-size:25px;
+}
+
+.contact-socials{
     display:flex;
     gap:10px;
     flex-wrap:wrap;
     margin-top:25px;
 }
+
+.contact-socials a{
+    text-decoration:none;
+}
+
 .logo-box{
+    min-height:300px;
     background:#111827;
     border-radius:20px;
-    min-height:300px;
+
     display:flex;
     align-items:center;
     justify-content:center;
 }
+
 .logo-box img{
     width:330px;
     max-width:85%;
@@ -267,88 +446,196 @@ section{padding:75px 20px}
     border-radius:15px;
 }
 
+/* ================= FOOTER ================= */
+
 footer{
     background:#080d15;
-    color:#fff;
+    color:white;
     padding:30px 20px;
 }
+
 .footer{
-    max-width:1200px;
+    max-width:1250px;
     margin:auto;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:20px;
 }
-.footer img{
+
+.footer-logo{
     width:120px;
-    background:#fff;
+    background:white;
     border-radius:8px;
 }
 
-@media(max-width:900px){
-    nav a:not(.social){display:none}
-    .hero-inner{grid-template-columns:1fr;text-align:center}
-    .hero p{margin:auto auto 30px}
-    .buttons{justify-content:center}
-    .grid{grid-template-columns:repeat(2,1fr)}
-    .advantages{grid-template-columns:1fr}
-    .contact-box{grid-template-columns:1fr}
+.footer a{
+    text-decoration:none;
 }
-@media(max-width:550px){
-    .hero h1{font-size:45px}
-    .grid{grid-template-columns:1fr}
-    .contact-box{padding:25px 18px}
-    .footer{flex-direction:column;text-align:center}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:950px){
+
+    .main-nav>a:not(.telegram-btn):not(.instagram-btn):not(.phone-btn){
+        display:none;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .advantages{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .nav{
+        padding:7px 10px;
+        gap:7px;
+    }
+
+    .brand img{
+        width:110px;
+    }
+
+    .main-nav{
+        gap:4px;
+    }
+
+    .phone-btn,
+    .telegram-btn,
+    .instagram-btn{
+        padding:9px!important;
+        font-size:12px;
+    }
+
+    .telegram-btn svg,
+    .instagram-btn svg{
+        width:16px;
+        height:16px;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        padding:25px 18px;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
 }
 </style>
 </head>
 
+
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
+
+<header class="top-header">
+
 <div class="nav">
 
-<a href="#home">
-<img src="logo.png" class="logo" alt="POWERMAX">
+<a href="#home" class="brand">
+<img src="logo.png" alt="POWERMAX">
 </a>
 
-<nav>
+<nav class="main-nav">
+
 <a href="#home">Bosh sahifa</a>
 <a href="#categories">Kategoriyalar</a>
 <a href="#catalog">Katalog</a>
-<a href="#contact">Bog‘lanish</a>
 
-<a class="social telegram"
+<a
+href="tel:+998555123337"
+class="phone-btn">
+☎ Telefon
+</a>
+
+
+<!-- TELEGRAM KANAL -->
+
+<a
 href="https://t.me/+WQ38coHciuM1YTgy"
-target="_blank">
+target="_blank"
+class="telegram-btn">
 
 <svg viewBox="0 0 24 24">
 <path d="M21.7 3.3L18.5 20c-.24 1.18-.9 1.47-1.83.92l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.12 9.33-8.43c.4-.36-.09-.56-.62-.2L5.73 13.83.74 12.27c-1.08-.34-1.1-1.08.23-1.58L20.47 3.1c.9-.34 1.69.2 1.23.2z"/>
 </svg>
+
 Telegram
+
 </a>
 
-<a class="social instagram"
+
+<!-- INSTAGRAM -->
+
+<a
 href="https://www.instagram.com/powermaxdokan_bot/"
-target="_blank">
+target="_blank"
+class="instagram-btn">
 
 <svg viewBox="0 0 24 24">
 <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5zM17.5 6.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/>
 </svg>
+
 Instagram
+
 </a>
+
 </nav>
 
 </div>
+
 </header>
 
 
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
+
 <div class="hero-inner">
 
 <div>
-<h1>POWER<span>MAX</span></h1>
+
+<h1>
+POWER<span>MAX</span>
+</h1>
 
 <p>
 Radio texnika, elektronika, elektr jihozlari,
@@ -357,33 +644,59 @@ kerakli turli mahsulotlar.
 </p>
 
 <div class="buttons">
-<a href="#catalog" class="btn orange">Katalogni ko‘rish</a>
 
-<a href="https://t.me/+WQ38coHciuM1YTgy"
+<a
+href="#catalog"
+class="btn orange">
+Katalogni ko‘rish
+</a>
+
+<a
+href="https://t.me/+WQ38coHciuM1YTgy"
 target="_blank"
-class="btn darkbtn">
+class="btn outline">
 Telegram kanal
 </a>
+
 </div>
+
 </div>
+
 
 <div class="hero-logo">
-<img src="logo.png" alt="POWERMAX">
+
+<img
+src="logo.png"
+alt="POWERMAX logosi">
+
 </div>
 
 </div>
+
 </section>
 
 
-<section class="categories" id="categories">
+<!-- ================= CATEGORIES ================= -->
+
+<section
+class="categories"
+id="categories">
+
 <div class="container">
 
 <div class="title">
+
 <h2>Mahsulot kategoriyalari</h2>
-<p>POWERMAX'dagi asosiy mahsulotlar</p>
+
+<p>
+POWERMAX'dagi mahsulotlar
+</p>
+
 </div>
 
+
 <div class="grid">
+
 
 <div class="category">
 <div class="icon">📻</div>
@@ -391,11 +704,13 @@ Telegram kanal
 <p>Radio qurilmalar va elektronika</p>
 </div>
 
+
 <div class="category">
 <div class="icon">🔊</div>
 <h3>Kolonkalar</h3>
-<p>Ovoz kuchaytirgichlar va audio qurilmalar</p>
+<p>Audio kolonkalar va ovoz qurilmalari</p>
 </div>
+
 
 <div class="category">
 <div class="icon">🫖</div>
@@ -403,23 +718,27 @@ Telegram kanal
 <p>Uy uchun elektr choynaklar</p>
 </div>
 
+
 <div class="category">
-<div class="icon">🧴</div>
+<div class="icon">🧊</div>
 <h3>Termoslar</h3>
 <p>Issiq va sovuq ichimliklar uchun</p>
 </div>
 
-<div class="category">
-<div class="icon">⌚</div>
-<h3>Soatlar</h3>
-<p>Elektron va turli maishiy soatlar</p>
-</div>
 
 <div class="category">
-<div class="icon">👔</div>
+<div class="icon">⏰</div>
+<h3>Soatlar</h3>
+<p>Elektron va maishiy soatlar</p>
+</div>
+
+
+<div class="category">
+<div class="icon">♨️</div>
 <h3>Dazmollar</h3>
 <p>Uy uchun dazmollar</p>
 </div>
+
 
 <div class="category">
 <div class="icon">🎛️</div>
@@ -427,11 +746,13 @@ Telegram kanal
 <p>Turli qurilmalar uchun pultlar</p>
 </div>
 
+
 <div class="category">
 <div class="icon">🔥</div>
 <h3>Isitgichlar</h3>
 <p>Elektr isitish qurilmalari</p>
 </div>
+
 
 <div class="category">
 <div class="icon">🌀</div>
@@ -439,23 +760,27 @@ Telegram kanal
 <p>Havo aylantirish qurilmalari</p>
 </div>
 
+
 <div class="category">
 <div class="icon">❄️</div>
 <h3>Mini konditsionerlar</h3>
 <p>Portativ sovitish qurilmalari</p>
 </div>
 
+
 <div class="category">
 <div class="icon">📡</div>
 <h3>Antennalar</h3>
-<p>Televizor va aloqa antennalari</p>
+<p>Turli xil antennalar</p>
 </div>
+
 
 <div class="category">
 <div class="icon">🏊</div>
 <h3>Basseynlar</h3>
-<p>Yozgi basseyn va aksessuarlar</p>
+<p>Basseyn va yozgi aksessuarlar</p>
 </div>
+
 
 <div class="category">
 <div class="icon">✂️</div>
@@ -463,11 +788,13 @@ Telegram kanal
 <p>Turli maqsadlar uchun qaychilar</p>
 </div>
 
+
 <div class="category">
 <div class="icon">🔧</div>
 <h3>Omburlar</h3>
 <p>Elektrik va ta'mirlash asboblari</p>
 </div>
+
 
 <div class="category">
 <div class="icon">🪛</div>
@@ -475,29 +802,34 @@ Telegram kanal
 <p>Otvyortka va buragichlar</p>
 </div>
 
+
 <div class="category">
 <div class="icon">🔦</div>
 <h3>Fonarlar</h3>
-<p>Qo‘l va boshqa fonarlar</p>
+<p>Turli xil fonarlar</p>
 </div>
+
 
 <div class="category">
 <div class="icon">🔌</div>
 <h3>Kabellar</h3>
-<p>Turli xil elektr va ulash kabellari</p>
+<p>Elektr va ulash kabellari</p>
 </div>
+
+
+<div class="category">
+<div class="icon">🔋</div>
+<h3>Uzaytirgichlar</h3>
+<p>Elektr uzaytirgichlar va rozetkalar</p>
+</div>
+
 
 <div class="category">
 <div class="icon">📏</div>
-<h3>Uzaytirgichlar</h3>
-<p>Elektr uzaytirgich va rozetkalar</p>
-</div>
-
-<div class="category">
-<div class="icon">🩹</div>
 <h3>Izolyatsion lentalar</h3>
 <p>Elektrik uchun skotch va lentalar</p>
 </div>
+
 
 <div class="category">
 <div class="icon">⚖️</div>
@@ -505,11 +837,13 @@ Telegram kanal
 <p>Elektron va boshqa tarozilar</p>
 </div>
 
+
 <div class="category">
 <div class="icon">🔥</div>
 <h3>Gaz plitalari</h3>
-<p>Gaz plita va unga kerakli jihozlar</p>
+<p>Gaz plitalari va jihozlari</p>
 </div>
+
 
 <div class="category">
 <div class="icon">💡</div>
@@ -517,268 +851,472 @@ Telegram kanal
 <p>Turli xil elektr lampalar</p>
 </div>
 
+
 <div class="category">
 <div class="icon">🔩</div>
 <h3>Ehtiyot qismlar</h3>
 <p>Mayda ta'mirlash va almashtirish qismlari</p>
 </div>
 
+
 <div class="category">
 <div class="icon">📢</div>
 <h3>Reklama mahsulotlari</h3>
-<p>Ochiq reklama va boshqa reklama materiallari</p>
+<p>Ochiq reklama va reklama materiallari</p>
 </div>
+
 
 </div>
 </div>
 </section>
 
 
-<section class="catalog" id="catalog">
+<!-- ================= CATALOG ================= -->
+
+<section
+class="catalog"
+id="catalog">
+
 <div class="container">
 
 <div class="title">
+
 <h2>POWERMAX katalogi</h2>
-<p>Kerakli mahsulot turini tanlang</p>
+
+<p>
+Kerakli mahsulotni qidiring
+</p>
+
 </div>
+
 
 <input
 class="search"
 type="search"
-placeholder="Mahsulot qidirish..."
+placeholder="🔎 Mahsulot qidirish..."
 onkeyup="searchProducts(this.value)"
 >
 
-<div class="grid" id="products">
+
+<div
+class="grid"
+id="products">
+
 
 <div class="product">
 <div class="product-top">📻</div>
 <div class="product-body">
 <h3>Radio texnika</h3>
-<p>Radio va turli elektron qurilmalar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<p>Radio va elektron qurilmalar</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🔊</div>
 <div class="product-body">
 <h3>Kolonkalar</h3>
 <p>Turli xil audio kolonkalar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🫖</div>
 <div class="product-body">
 <h3>Elektr choynaklar</h3>
 <p>Uy uchun elektr choynaklar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
 
+
 <div class="product">
-<div class="product-top">🧴</div>
+<div class="product-top">🧊</div>
 <div class="product-body">
 <h3>Termoslar</h3>
 <p>Issiq va sovuq ichimliklar uchun</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
 
+
 <div class="product">
-<div class="product-top">⌚</div>
+<div class="product-top">⏰</div>
 <div class="product-body">
 <h3>Soatlar</h3>
 <p>Elektron va maishiy soatlar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
 
+
 <div class="product">
-<div class="product-top">👔</div>
+<div class="product-top">♨️</div>
 <div class="product-body">
 <h3>Dazmollar</h3>
 <p>Uy uchun dazmollar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🎛️</div>
 <div class="product-body">
 <h3>Pultlar</h3>
 <p>Turli qurilmalar uchun pultlar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🔥</div>
 <div class="product-body">
 <h3>Isitgichlar</h3>
 <p>Elektr isitish qurilmalari</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🌀</div>
 <div class="product-body">
 <h3>Ventilyatorlar</h3>
 <p>Havo aylantirish qurilmalari</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">❄️</div>
 <div class="product-body">
 <h3>Mini konditsionerlar</h3>
 <p>Portativ sovitish qurilmalari</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">📡</div>
 <div class="product-body">
 <h3>Antennalar</h3>
-<p>Turli xil antennalar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<p>Televizor va aloqa antennalari</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🏊</div>
 <div class="product-body">
 <h3>Basseynlar</h3>
-<p>Yozgi basseynlar va aksessuarlar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<p>Yozgi basseyn va aksessuarlar</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
+
+<div class="product">
+<div class="product-top">✂️</div>
+<div class="product-body">
+<h3>Qaychilar</h3>
+<p>Turli xil qaychilar</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
+</div>
+</div>
+
 
 <div class="product">
 <div class="product-top">🔧</div>
 <div class="product-body">
-<h3>Asbob-uskunalar</h3>
-<p>Qaychi, ombur, buragich va boshqa asboblar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<h3>Omburlar</h3>
+<p>Elektrik va ta'mirlash omburlari</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
+
+<div class="product">
+<div class="product-top">🪛</div>
+<div class="product-body">
+<h3>Buragichlar</h3>
+<p>Otvyortka va buragichlar</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
+</div>
+</div>
+
 
 <div class="product">
 <div class="product-top">🔦</div>
 <div class="product-body">
 <h3>Fonarlar</h3>
 <p>Turli xil fonarlar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🔌</div>
 <div class="product-body">
-<h3>Kabellar va uzaytirgichlar</h3>
-<p>Kabel, uzaytirgich va elektr aksessuarlari</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<h3>Kabellar</h3>
+<p>Elektr va ulash kabellari</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
 
+
 <div class="product">
-<div class="product-top">🩹</div>
+<div class="product-top">🔋</div>
+<div class="product-body">
+<h3>Uzaytirgichlar</h3>
+<p>Elektr uzaytirgichlar</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
+</div>
+</div>
+
+
+<div class="product">
+<div class="product-top">📏</div>
 <div class="product-body">
 <h3>Izolyatsion lentalar</h3>
-<p>Elektrik uchun turli lentalar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<p>Elektrik skotch va lentalari</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">⚖️</div>
 <div class="product-body">
 <h3>Tarozilar</h3>
 <p>Elektron va boshqa tarozilar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🔥</div>
 <div class="product-body">
 <h3>Gaz plitalari</h3>
-<p>Gaz plita va aksessuarlari</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<p>Gaz plitalari va jihozlari</p>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">💡</div>
 <div class="product-body">
 <h3>Lampochkalar</h3>
 <p>Turli xil elektr lampalar</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">🔩</div>
 <div class="product-body">
 <h3>Ehtiyot qismlar</h3>
 <p>Mayda ta'mirlash va almashtirish qismlari</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 <div class="product">
 <div class="product-top">📢</div>
 <div class="product-body">
 <h3>Reklama mahsulotlari</h3>
 <p>Ochiq reklama va boshqa reklama materiallari</p>
-<a class="product-btn" href="https://t.me/+WQ38coHciuM1YTgy" target="_blank">So‘rash</a>
+<a class="product-btn"
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank">
+So‘rash
+</a>
 </div>
 </div>
+
 
 </div>
 </div>
 </section>
 
 
+<!-- ================= WHY POWERMAX ================= -->
+
 <section class="dark">
+
 <div class="container">
 
 <div class="title">
+
 <h2>Nega POWERMAX?</h2>
-<p style="color:#aaa">Sifat, tanlov va qulay aloqa</p>
+
+<p>
+Sifat, tanlov va qulay xizmat
+</p>
+
 </div>
+
 
 <div class="advantages">
 
+
 <div class="advantage">
-<div class="advantage-icon">✓</div>
+
+<div class="advantage-icon">🛒</div>
+
 <h3>Keng tanlov</h3>
-<p>Radio texnika, maishiy texnika, elektr jihozlari va ko‘plab boshqa mahsulotlar.</p>
+
+<p>
+Radio texnika, kolonkalar, maishiy texnika,
+elektr jihozlari va ko‘plab boshqa mahsulotlar.
+</p>
+
 </div>
 
+
 <div class="advantage">
+
 <div class="advantage-icon">⚡</div>
+
 <h3>Qulay xizmat</h3>
-<p>Kerakli mahsulot haqida Telegram yoki telefon orqali ma'lumot olishingiz mumkin.</p>
+
+<p>
+Kerakli mahsulot haqida Telegram yoki telefon
+orqali tez ma'lumot olishingiz mumkin.
+</p>
+
 </div>
 
+
 <div class="advantage">
+
 <div class="advantage-icon">💬</div>
-<h3>Biz bilan aloqa</h3>
-<p>Telegram kanal va Instagram orqali POWERMAX yangiliklarini kuzatib boring.</p>
+
+<h3>Doimiy aloqa</h3>
+
+<p>
+Telegram kanal va Instagram orqali
+POWERMAX yangiliklarini kuzatib boring.
+</p>
+
 </div>
+
 
 </div>
 </div>
 </section>
 
 
-<section class="contact" id="contact">
+<!-- ================= CONTACT ================= -->
+
+<section
+class="contact"
+id="contact">
+
 <div class="container">
 
 <div class="contact-box">
@@ -787,85 +1325,155 @@ onkeyup="searchProducts(this.value)"
 
 <h2>Biz bilan bog‘laning</h2>
 
-<p>
+<p class="contact-description">
 Mahsulot, narx yoki buyurtma haqida
 ma'lumot olish uchun bizga murojaat qiling.
 </p>
 
+
 <div class="contact-item">
+
 <div class="contact-icon">📞</div>
+
 <div>
-<strong>Telefon</strong><br>
-<span>+998 55 512 33 37</span>
-</div>
+
+<strong>Telefon</strong>
+
+<br>
+
+<a
+href="tel:+998555123337"
+style="color:#222;text-decoration:none">
+
++998 55 512 33 37
+
+</a>
+
 </div>
 
+</div>
+
+
 <div class="contact-item">
+
 <div class="contact-icon">✈️</div>
+
 <div>
-<strong>Telegram</strong><br>
+
+<strong>Telegram</strong>
+
+<br>
+
 <span>POWERMAX Telegram kanali</span>
+
 </div>
+
 </div>
+
 
 <div class="contact-item">
+
 <div class="contact-icon">📷</div>
+
 <div>
-<strong>Instagram</strong><br>
+
+<strong>Instagram</strong>
+
+<br>
+
 <span>@powermaxdokan_bot</span>
-</div>
+
 </div>
 
-<div class="socials">
+</div>
 
-<a class="social telegram"
+
+<div class="contact-socials">
+
+
+<a
 href="https://t.me/+WQ38coHciuM1YTgy"
-target="_blank">
+target="_blank"
+class="telegram-btn">
 
 <svg viewBox="0 0 24 24">
 <path d="M21.7 3.3L18.5 20c-.24 1.18-.9 1.47-1.83.92l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.12 9.33-8.43c.4-.36-.09-.56-.62-.2L5.73 13.83.74 12.27c-1.08-.34-1.1-1.08.23-1.58L20.47 3.1c.9-.34 1.69.2 1.23.2z"/>
 </svg>
-Telegram kanal
+
+Telegram
+
 </a>
 
-<a class="social instagram"
+
+<a
 href="https://www.instagram.com/powermaxdokan_bot/"
-target="_blank">
+target="_blank"
+class="instagram-btn">
 
 <svg viewBox="0 0 24 24">
 <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5zM17.5 6.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/>
 </svg>
+
 Instagram
+
+</a>
+
+
+<a
+href="tel:+998555123337"
+class="phone-btn"
+style="text-decoration:none;padding:10px 14px;border-radius:9px">
+
+☎ Qo‘ng‘iroq qilish
+
 </a>
 
 </div>
 
 </div>
 
+
 <div class="logo-box">
-<img src="logo.png" alt="POWERMAX">
+
+<img
+src="logo.png"
+alt="POWERMAX">
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
+
 <div class="footer">
 
-<img src="logo.png" alt="POWERMAX">
+<img
+src="logo.png"
+class="footer-logo"
+alt="POWERMAX">
+
 
 <div>
 © 2026 POWERMAX. Barcha huquqlar himoyalangan.
 </div>
 
+
 <div>
+
 <a
 href="https://t.me/+WQ38coHciuM1YTgy"
 target="_blank"
-style="color:#229ed9;text-decoration:none;font-weight:bold">
+style="color:#229ed9;font-weight:bold">
+
 Telegram
+
 </a>
 
 &nbsp; | &nbsp;
@@ -873,19 +1481,26 @@ Telegram
 <a
 href="https://www.instagram.com/powermaxdokan_bot/"
 target="_blank"
-style="color:#e1306c;text-decoration:none;font-weight:bold">
+style="color:#e1306c;font-weight:bold">
+
 Instagram
+
 </a>
+
 </div>
 
 </div>
+
 </footer>
 
 
+<!-- ================= SEARCH ================= -->
+
 <script>
+
 function searchProducts(text){
 
-    text=text.toLowerCase();
+    text=text.toLowerCase().trim();
 
     const products=document.querySelectorAll(".product");
 
@@ -895,12 +1510,15 @@ function searchProducts(text){
 
         if(content.includes(text)){
             product.style.display="";
-        }else{
+        }
+        else{
             product.style.display="none";
         }
 
     });
+
 }
+
 </script>
 
 </body>
