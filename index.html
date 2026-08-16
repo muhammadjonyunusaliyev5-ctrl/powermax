@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="uz">
 <head>
@@ -7,16 +8,28 @@
 <title>POWERMAX — Elektronika va maishiy texnika</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#f4f6f8;
     color:#151922;
 }
-a{text-decoration:none}
 
-/* HEADER */
+a{
+    text-decoration:none;
+}
+
+/* ================= HEADER ================= */
+
 header{
     position:sticky;
     top:0;
@@ -39,6 +52,7 @@ header{
 }
 
 /* LOGO */
+
 .logo{
     width:155px;
     height:58px;
@@ -51,18 +65,15 @@ header{
     flex-shrink:0;
 }
 
-.logo-text{
-    font-size:25px;
-    font-weight:900;
-    letter-spacing:1px;
-    color:white;
-}
-
-.logo-text span{
-    color:#ff6800;
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
 }
 
 /* NAV */
+
 .nav-links{
     display:flex;
     align-items:center;
@@ -84,7 +95,8 @@ header{
     color:#ff6800;
 }
 
-/* SOCIAL BUTTONS */
+/* SOCIAL */
+
 .telegram{
     background:#229ed9!important;
     color:white!important;
@@ -118,7 +130,8 @@ header{
     fill:white;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
     background:
     radial-gradient(circle at 85% 20%,rgba(255,102,0,.22),transparent 30%),
@@ -183,23 +196,24 @@ header{
     color:white;
 }
 
+/* HERO LOGO */
+
 .hero-card{
     background:white;
     color:#111827;
     border-radius:25px;
-    padding:45px 25px;
+    padding:30px 25px;
     text-align:center;
     box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
 
-.hero-logo{
-    font-size:55px;
-    font-weight:900;
-    letter-spacing:2px;
-}
-
-.hero-logo span{
-    color:#ff6800;
+.hero-card img{
+    width:100%;
+    max-width:300px;
+    height:170px;
+    object-fit:contain;
+    display:block;
+    margin:auto;
 }
 
 .hero-card p{
@@ -208,7 +222,8 @@ header{
     margin:10px auto 0;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
+
 section{
     padding:70px 20px;
 }
@@ -232,7 +247,8 @@ section{
     color:#70757d;
 }
 
-/* CATEGORIES */
+/* ================= CATEGORIES ================= */
+
 .categories{
     background:white;
 }
@@ -274,7 +290,8 @@ section{
     line-height:1.5;
 }
 
-/* CATALOG */
+/* ================= CATALOG ================= */
+
 .catalog{
     background:#f4f6f8;
 }
@@ -342,7 +359,8 @@ section{
     font-weight:700;
 }
 
-/* ADVANTAGES */
+/* ================= ADVANTAGES ================= */
+
 .dark{
     background:#101722;
     color:white;
@@ -376,7 +394,8 @@ section{
     line-height:1.6;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact{
     background:white;
 }
@@ -432,19 +451,18 @@ section{
     display:flex;
     align-items:center;
     justify-content:center;
+    padding:25px;
 }
 
-.big-logo{
-    font-size:55px;
-    font-weight:900;
-    color:white;
+.contact-logo img{
+    width:100%;
+    max-width:350px;
+    max-height:220px;
+    object-fit:contain;
 }
 
-.big-logo span{
-    color:#ff6800;
-}
+/* ================= FOOTER ================= */
 
-/* FOOTER */
 footer{
     background:#080d15;
     color:white;
@@ -460,16 +478,14 @@ footer{
     gap:20px;
 }
 
-.footer-logo{
-    font-size:25px;
-    font-weight:900;
+.footer-logo img{
+    width:150px;
+    height:55px;
+    object-fit:contain;
 }
 
-.footer-logo span{
-    color:#ff6800;
-}
+/* ================= MOBILE ================= */
 
-/* MOBILE */
 @media(max-width:950px){
 
     .nav{
@@ -519,10 +535,6 @@ footer{
         height:48px;
     }
 
-    .logo-text{
-        font-size:18px;
-    }
-
     .nav-links{
         gap:3px;
     }
@@ -559,13 +571,14 @@ footer{
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
+
 <header>
 
 <div class="nav">
 
 <a href="#home" class="logo">
-<div class="logo-text">POWER<span>MAX</span></div>
+    <img src="logo.png" alt="POWERMAX">
 </a>
 
 <nav class="nav-links">
@@ -579,6 +592,20 @@ footer{
 ☎ Telefon
 </a>
 
+<!-- TELEGRAM KANAL -->
+<a
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank"
+class="telegram social">
+
+<svg viewBox="0 0 24 24">
+<path d="M21.7 3.3L18.5 20c-.24 1.18-.9 1.47-1.83.92l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.12 9.33-8.43c.4-.36-.09-.56-.62-.2L5.73 13.83.74 12.27c-1.08-.34-1.1-1.08.23-1.58L20.47 3.1c.9-.34 1.69.2 1.23.2z"/>
+</svg>
+
+Kanal
+
+</a>
+
 <!-- TELEGRAM BOT -->
 <a
 href="https://t.me/powermaxdokan_bot"
@@ -589,30 +616,20 @@ class="telegram social">
 <path d="M21.7 3.3L18.5 20c-.24 1.18-.9 1.47-1.83.92l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.12 9.33-8.43c.4-.36-.09-.56-.62-.2L5.73 13.83.74 12.27c-1.08-.34-1.1-1.08.23-1.58L20.47 3.1c.9-.34 1.69.2 1.23.2z"/>
 </svg>
 
-Telegram
+Bot
 
 </a>
 
 <!-- INSTAGRAM -->
-<a
-href="https://www.instagram.com/powermaxdokan_bot/"
-target="_blank"
-class="instagram social">
-
-<svg viewBox="0 0 24 24">
-<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5zM17.5 6.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/>
-</svg>
-
-Instagram
-
-</a>
+<!-- Instagram manzili hozircha kiritilmagan -->
 
 </nav>
 </div>
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
 
 <div class="hero-inner">
@@ -649,9 +666,7 @@ class="btn btn-telegram">
 
 <div class="hero-card">
 
-<div class="hero-logo">
-POWER<span>MAX</span>
-</div>
+<img src="logo.png" alt="POWERMAX logo">
 
 <p>
 Sizga kerakli mahsulotlarni POWERMAX'dan toping.
@@ -664,7 +679,8 @@ Sizga kerakli mahsulotlarni POWERMAX'dan toping.
 </section>
 
 
-<!-- KATEGORIYALAR -->
+<!-- ================= KATEGORIYALAR ================= -->
+
 <section class="categories" id="categories">
 
 <div class="container">
@@ -676,156 +692,38 @@ Sizga kerakli mahsulotlarni POWERMAX'dan toping.
 
 <div class="grid">
 
-<div class="category">
-<div class="icon">📻</div>
-<h3>Radio texnika</h3>
-<p>Radio va elektron qurilmalar</p>
-</div>
-
-<div class="category">
-<div class="icon">🔊</div>
-<h3>Kolonkalar</h3>
-<p>Audio kolonkalar va ovoz qurilmalari</p>
-</div>
-
-<div class="category">
-<div class="icon">🫖</div>
-<h3>Elektr choynaklar</h3>
-<p>Uy uchun elektr choynaklar</p>
-</div>
-
-<div class="category">
-<div class="icon">🧊</div>
-<h3>Termoslar</h3>
-<p>Issiq va sovuq ichimliklar uchun</p>
-</div>
-
-<div class="category">
-<div class="icon">⏰</div>
-<h3>Soatlar</h3>
-<p>Elektron va maishiy soatlar</p>
-</div>
-
-<div class="category">
-<div class="icon">♨️</div>
-<h3>Dazmollar</h3>
-<p>Uy uchun dazmollar</p>
-</div>
-
-<div class="category">
-<div class="icon">🎛️</div>
-<h3>Pultlar</h3>
-<p>Turli qurilmalar uchun pultlar</p>
-</div>
-
-<div class="category">
-<div class="icon">🔥</div>
-<h3>Isitgichlar</h3>
-<p>Elektr isitish qurilmalari</p>
-</div>
-
-<div class="category">
-<div class="icon">🌀</div>
-<h3>Ventilyatorlar</h3>
-<p>Havo aylantirish qurilmalari</p>
-</div>
-
-<div class="category">
-<div class="icon">❄️</div>
-<h3>Mini konditsionerlar</h3>
-<p>Portativ sovitish qurilmalari</p>
-</div>
-
-<div class="category">
-<div class="icon">📡</div>
-<h3>Antennalar</h3>
-<p>Turli xil antennalar</p>
-</div>
-
-<div class="category">
-<div class="icon">🏊</div>
-<h3>Basseynlar</h3>
-<p>Basseyn va yozgi aksessuarlar</p>
-</div>
-
-<div class="category">
-<div class="icon">✂️</div>
-<h3>Qaychilar</h3>
-<p>Turli xil qaychilar</p>
-</div>
-
-<div class="category">
-<div class="icon">🔧</div>
-<h3>Omburlar</h3>
-<p>Elektrik va ta’mirlash asboblari</p>
-</div>
-
-<div class="category">
-<div class="icon">🪛</div>
-<h3>Otvyortkalar</h3>
-<p>Buragich va otvyortkalar</p>
-</div>
-
-<div class="category">
-<div class="icon">🔦</div>
-<h3>Fonarlar</h3>
-<p>Turli xil fonarlar</p>
-</div>
-
-<div class="category">
-<div class="icon">🔌</div>
-<h3>Kabellar</h3>
-<p>Elektr va ulash kabellari</p>
-</div>
-
-<div class="category">
-<div class="icon">🔋</div>
-<h3>Uzaytirgichlar</h3>
-<p>Elektr uzaytirgichlar</p>
-</div>
-
-<div class="category">
-<div class="icon">📏</div>
-<h3>Izolyatsion lentalar</h3>
-<p>Elektrik skotchlar va lentalar</p>
-</div>
-
-<div class="category">
-<div class="icon">⚖️</div>
-<h3>Tarozilar</h3>
-<p>Elektron va boshqa tarozilar</p>
-</div>
-
-<div class="category">
-<div class="icon">🔥</div>
-<h3>Gaz plitalari</h3>
-<p>Gaz plitalari va jihozlari</p>
-</div>
-
-<div class="category">
-<div class="icon">💡</div>
-<h3>Lampochkalar</h3>
-<p>Turli xil elektr lampalar</p>
-</div>
-
-<div class="category">
-<div class="icon">🔩</div>
-<h3>Ehtiyot qismlar</h3>
-<p>Mayda zapchastlar va qismlar</p>
-</div>
-
-<div class="category">
-<div class="icon">📢</div>
-<h3>Reklama mahsulotlari</h3>
-<p>Ochiq reklama va boshqa materiallar</p>
-</div>
+<div class="category"><div class="icon">📻</div><h3>Radio texnika</h3><p>Radio va elektron qurilmalar</p></div>
+<div class="category"><div class="icon">🔊</div><h3>Kolonkalar</h3><p>Audio kolonkalar va ovoz qurilmalari</p></div>
+<div class="category"><div class="icon">🫖</div><h3>Elektr choynaklar</h3><p>Uy uchun elektr choynaklar</p></div>
+<div class="category"><div class="icon">🧊</div><h3>Termoslar</h3><p>Issiq va sovuq ichimliklar uchun</p></div>
+<div class="category"><div class="icon">⏰</div><h3>Soatlar</h3><p>Elektron va maishiy soatlar</p></div>
+<div class="category"><div class="icon">♨️</div><h3>Dazmollar</h3><p>Uy uchun dazmollar</p></div>
+<div class="category"><div class="icon">🎛️</div><h3>Pultlar</h3><p>Turli qurilmalar uchun pultlar</p></div>
+<div class="category"><div class="icon">🔥</div><h3>Isitgichlar</h3><p>Elektr isitish qurilmalari</p></div>
+<div class="category"><div class="icon">🌀</div><h3>Ventilyatorlar</h3><p>Havo aylantirish qurilmalari</p></div>
+<div class="category"><div class="icon">❄️</div><h3>Mini konditsionerlar</h3><p>Portativ sovitish qurilmalari</p></div>
+<div class="category"><div class="icon">📡</div><h3>Antennalar</h3><p>Turli xil antennalar</p></div>
+<div class="category"><div class="icon">🏊</div><h3>Basseynlar</h3><p>Basseyn va yozgi aksessuarlar</p></div>
+<div class="category"><div class="icon">✂️</div><h3>Qaychilar</h3><p>Turli xil qaychilar</p></div>
+<div class="category"><div class="icon">🔧</div><h3>Omburlar</h3><p>Elektrik va ta’mirlash asboblari</p></div>
+<div class="category"><div class="icon">🪛</div><h3>Otvyortkalar</h3><p>Buragich va otvyortkalar</p></div>
+<div class="category"><div class="icon">🔦</div><h3>Fonarlar</h3><p>Turli xil fonarlar</p></div>
+<div class="category"><div class="icon">🔌</div><h3>Kabellar</h3><p>Elektr va ulash kabellari</p></div>
+<div class="category"><div class="icon">🔋</div><h3>Uzaytirgichlar</h3><p>Elektr uzaytirgichlar</p></div>
+<div class="category"><div class="icon">📏</div><h3>Izolyatsion lentalar</h3><p>Elektrik skotchlar va lentalar</p></div>
+<div class="category"><div class="icon">⚖️</div><h3>Tarozilar</h3><p>Elektron va boshqa tarozilar</p></div>
+<div class="category"><div class="icon">🔥</div><h3>Gaz plitalari</h3><p>Gaz plitalari va jihozlari</p></div>
+<div class="category"><div class="icon">💡</div><h3>Lampochkalar</h3><p>Turli xil elektr lampalar</p></div>
+<div class="category"><div class="icon">🔩</div><h3>Ehtiyot qismlar</h3><p>Mayda zapchastlar va qismlar</p></div>
+<div class="category"><div class="icon">📢</div><h3>Reklama mahsulotlari</h3><p>Ochiq reklama va boshqa materiallar</p></div>
 
 </div>
 </div>
 </section>
 
 
-<!-- KATALOG -->
+<!-- ================= KATALOG ================= -->
+
 <section class="catalog" id="catalog">
 
 <div class="container">
@@ -844,228 +742,61 @@ onkeyup="searchProducts(this.value)"
 
 <div class="grid" id="products">
 
-<div class="product">
-<div class="product-icon">📻</div>
-<div class="product-body">
-<h3>Radio texnika</h3>
-<p>Radio va elektron qurilmalar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">📻</div><div class="product-body"><h3>Radio texnika</h3><p>Radio va elektron qurilmalar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🔊</div>
-<div class="product-body">
-<h3>Kolonkalar</h3>
-<p>Audio kolonkalar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🔊</div><div class="product-body"><h3>Kolonkalar</h3><p>Audio kolonkalar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🫖</div>
-<div class="product-body">
-<h3>Elektr choynaklar</h3>
-<p>Uy uchun choynaklar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🫖</div><div class="product-body"><h3>Elektr choynaklar</h3><p>Uy uchun choynaklar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🧊</div>
-<div class="product-body">
-<h3>Termoslar</h3>
-<p>Issiq va sovuq ichimliklar uchun</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🧊</div><div class="product-body"><h3>Termoslar</h3><p>Issiq va sovuq ichimliklar uchun</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">⏰</div>
-<div class="product-body">
-<h3>Soatlar</h3>
-<p>Elektron va maishiy soatlar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">⏰</div><div class="product-body"><h3>Soatlar</h3><p>Elektron va maishiy soatlar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">♨️</div>
-<div class="product-body">
-<h3>Dazmollar</h3>
-<p>Uy uchun dazmollar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">♨️</div><div class="product-body"><h3>Dazmollar</h3><p>Uy uchun dazmollar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🎛️</div>
-<div class="product-body">
-<h3>Pultlar</h3>
-<p>Turli qurilmalar uchun</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🎛️</div><div class="product-body"><h3>Pultlar</h3><p>Turli qurilmalar uchun</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🔥</div>
-<div class="product-body">
-<h3>Isitgichlar</h3>
-<p>Elektr isitish qurilmalari</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🔥</div><div class="product-body"><h3>Isitgichlar</h3><p>Elektr isitish qurilmalari</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🌀</div>
-<div class="product-body">
-<h3>Ventilyatorlar</h3>
-<p>Havo aylantirish qurilmalari</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🌀</div><div class="product-body"><h3>Ventilyatorlar</h3><p>Havo aylantirish qurilmalari</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">❄️</div>
-<div class="product-body">
-<h3>Mini konditsionerlar</h3>
-<p>Portativ sovitish qurilmalari</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">❄️</div><div class="product-body"><h3>Mini konditsionerlar</h3><p>Portativ sovitish qurilmalari</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">📡</div>
-<div class="product-body">
-<h3>Antennalar</h3>
-<p>Turli xil antennalar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">📡</div><div class="product-body"><h3>Antennalar</h3><p>Turli xil antennalar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🏊</div>
-<div class="product-body">
-<h3>Basseynlar</h3>
-<p>Basseyn va aksessuarlar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🏊</div><div class="product-body"><h3>Basseynlar</h3><p>Basseyn va aksessuarlar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">✂️</div>
-<div class="product-body">
-<h3>Qaychilar</h3>
-<p>Turli xil qaychilar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">✂️</div><div class="product-body"><h3>Qaychilar</h3><p>Turli xil qaychilar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🔧</div>
-<div class="product-body">
-<h3>Omburlar</h3>
-<p>Elektrik asboblari</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🔧</div><div class="product-body"><h3>Omburlar</h3><p>Elektrik asboblari</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🪛</div>
-<div class="product-body">
-<h3>Otvyortkalar</h3>
-<p>Buragich va otvyortkalar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🪛</div><div class="product-body"><h3>Otvyortkalar</h3><p>Buragich va otvyortkalar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🔦</div>
-<div class="product-body">
-<h3>Fonarlar</h3>
-<p>Turli xil fonarlar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🔦</div><div class="product-body"><h3>Fonarlar</h3><p>Turli xil fonarlar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🔌</div>
-<div class="product-body">
-<h3>Kabellar</h3>
-<p>Elektr va ulash kabellari</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🔌</div><div class="product-body"><h3>Kabellar</h3><p>Elektr va ulash kabellari</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🔋</div>
-<div class="product-body">
-<h3>Uzaytirgichlar</h3>
-<p>Elektr uzaytirgichlar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🔋</div><div class="product-body"><h3>Uzaytirgichlar</h3><p>Elektr uzaytirgichlar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">📏</div>
-<div class="product-body">
-<h3>Izolyatsion lentalar</h3>
-<p>Elektrik skotch va lentalar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">📏</div><div class="product-body"><h3>Izolyatsion lentalar</h3><p>Elektrik skotch va lentalar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">⚖️</div>
-<div class="product-body">
-<h3>Tarozilar</h3>
-<p>Elektron tarozilar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">⚖️</div><div class="product-body"><h3>Tarozilar</h3><p>Elektron tarozilar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🔥</div>
-<div class="product-body">
-<h3>Gaz plitalari</h3>
-<p>Gaz plitalari va jihozlari</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🔥</div><div class="product-body"><h3>Gaz plitalari</h3><p>Gaz plitalari va jihozlari</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">💡</div>
-<div class="product-body">
-<h3>Lampochkalar</h3>
-<p>Elektr lampalar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">💡</div><div class="product-body"><h3>Lampochkalar</h3><p>Elektr lampalar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">🔩</div>
-<div class="product-body">
-<h3>Ehtiyot qismlar</h3>
-<p>Mayda ehtiyot qismlar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">🔩</div><div class="product-body"><h3>Ehtiyot qismlar</h3><p>Mayda ehtiyot qismlar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
-<div class="product">
-<div class="product-icon">📢</div>
-<div class="product-body">
-<h3>Reklama mahsulotlari</h3>
-<p>Ochiq reklama va boshqa materiallar</p>
-<a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegramda so‘rash</a>
-</div>
-</div>
+<div class="product"><div class="product-icon">📢</div><div class="product-body"><h3>Reklama mahsulotlari</h3><p>Ochiq reklama va boshqa materiallar</p><a class="ask" href="https://t.me/powermaxdokan_bot" target="_blank">Telegram botda so‘rash</a></div></div>
 
 </div>
 </div>
 </section>
 
 
-<!-- AFZALLIKLAR -->
+<!-- ================= AFZALLIKLAR ================= -->
+
 <section class="dark">
 
 <div class="container">
@@ -1099,8 +830,8 @@ Telegram botimiz orqali bog‘lanishingiz mumkin.
 <div class="advantage-icon">🤝</div>
 <h3>Doimiy aloqa</h3>
 <p>
-Telegram, Instagram yoki telefon orqali
-biz bilan bog‘laning.
+Telegram kanal, Telegram bot yoki telefon
+orqali biz bilan bog‘laning.
 </p>
 </div>
 
@@ -1109,7 +840,8 @@ biz bilan bog‘laning.
 </section>
 
 
-<!-- BIZ BILAN BOG‘LANISH -->
+<!-- ================= BOG‘LANISH ================= -->
+
 <section class="contact" id="contact">
 
 <div class="container">
@@ -1136,6 +868,14 @@ ma’lumot olish uchun bizga murojaat qiling.
 </div>
 
 <div class="contact-item">
+<div class="contact-icon">📢</div>
+<div>
+<strong>Telegram kanal</strong><br>
+POWERMAX
+</div>
+</div>
+
+<div class="contact-item">
 <div class="contact-icon">🤖</div>
 <div>
 <strong>Telegram bot</strong><br>
@@ -1143,16 +883,23 @@ ma’lumot olish uchun bizga murojaat qiling.
 </div>
 </div>
 
-<div class="contact-item">
-<div class="contact-icon">📷</div>
-<div>
-<strong>Instagram</strong><br>
-@powermaxdokan_bot
-</div>
-</div>
-
 <div class="contact-socials">
 
+<!-- TELEGRAM KANAL -->
+<a
+href="https://t.me/+WQ38coHciuM1YTgy"
+target="_blank"
+class="telegram social">
+
+<svg viewBox="0 0 24 24">
+<path d="M21.7 3.3L18.5 20c-.24 1.18-.9 1.47-1.83.92l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.03.5l.37-5.12 9.33-8.43c.4-.36-.09-.56-.62-.2L5.73 13.83.74 12.27c-1.08-.34-1.1-1.08.23-1.58L20.47 3.1c.9-.34 1.69.2 1.23.2z"/>
+</svg>
+
+Telegram kanal
+
+</a>
+
+<!-- TELEGRAM BOT -->
 <a
 href="https://t.me/powermaxdokan_bot"
 target="_blank"
@@ -1166,19 +913,7 @@ Telegram bot
 
 </a>
 
-<a
-href="https://www.instagram.com/powermaxdokan_bot/"
-target="_blank"
-class="instagram social">
-
-<svg viewBox="0 0 24 24">
-<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5zM17.5 6.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/>
-</svg>
-
-Instagram
-
-</a>
-
+<!-- TELEFON -->
 <a
 href="tel:+998990907475"
 class="phone">
@@ -1192,9 +927,7 @@ class="phone">
 </div>
 
 <div class="contact-logo">
-<div class="big-logo">
-POWER<span>MAX</span>
-</div>
+<img src="logo.png" alt="POWERMAX logo">
 </div>
 
 </div>
@@ -1202,13 +935,14 @@ POWER<span>MAX</span>
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
 <div class="footer">
 
 <div class="footer-logo">
-POWER<span>MAX</span>
+<img src="logo.png" alt="POWERMAX">
 </div>
 
 <div>
@@ -1218,23 +952,19 @@ POWER<span>MAX</span>
 <div>
 
 <a
-href="https://t.me/powermaxdokan_bot"
+href="https://t.me/+WQ38coHciuM1YTgy"
 target="_blank"
 style="color:#229ed9;font-weight:bold">
-
-Telegram
-
+Telegram kanal
 </a>
 
 &nbsp; | &nbsp;
 
 <a
-href="https://www.instagram.com/powermaxdokan_bot/"
+href="https://t.me/powermaxdokan_bot"
 target="_blank"
-style="color:#e1306c;font-weight:bold">
-
-Instagram
-
+style="color:#229ed9;font-weight:bold">
+Telegram bot
 </a>
 
 </div>
@@ -1244,17 +974,19 @@ Instagram
 </footer>
 
 
+<!-- ================= SEARCH ================= -->
+
 <script>
 
 function searchProducts(text){
 
-    text=text.toLowerCase().trim();
+    text = text.toLowerCase().trim();
 
-    const products=document.querySelectorAll(".product");
+    const products = document.querySelectorAll(".product");
 
     products.forEach(function(product){
 
-        const content=product.innerText.toLowerCase();
+        const content = product.innerText.toLowerCase();
 
         product.style.display =
         content.includes(text) ? "" : "none";
@@ -1267,3 +999,4 @@ function searchProducts(text){
 
 </body>
 </html>
+```
